@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "sku": "Diecast1",
+      "name": "Tomica Premium 40 Sprinter Trueno AE86",
+      "price": 150000
+    },
+    {
+      "sku": "Diecast2",
+      "name": "Tomica Premium 38 Mazda Savanna RX-7",
+      "price": 300000
+    },
+    {
+      "sku": "Diecast3",
+      "name": "Tomica Premium 36 Honda NSX-R Special Color ",
+      "price": 300000
+    },
+    {
+      "sku": "Diecast4",
+      "name": "Tomica Premium 08 Nissan Silvia",
+      "price": 80000
+    },
+    {
+      "sku": "Diecast5",
+      "name": "Tomica Premium 39 Nissan Silvia S13 180SX",
+      "price": 175000
+    }
+  ]
+}
