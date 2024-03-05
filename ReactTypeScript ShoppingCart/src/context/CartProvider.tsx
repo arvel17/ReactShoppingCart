@@ -40,11 +40,11 @@ const reducer = (
       }
       const { sku, name, price } = action.payload;
       const filteredCart: CartItemType[] = state.cart.filter(
-        (item) => item.sku != sku //mengambil item yang memiliki sku tidak sama
+        (item) => item.sku !== sku //mengambil item yang memiliki sku tidak sama
         //dengan yang sudah ada
       );
       const itemExists: CartItemType | undefined = state.cart.find(
-        (item) => item.sku == sku //mencari barang dengan sku yang sama dengan yang diambil
+        (item) => item.sku === sku //mencari barang dengan sku yang sama dengan yang diambil
         //sebelumnya, jika ada masuk ke itemExists, kalau tidak ada jadi undefined
       );
       //kalau barang sudah ada, plus 1 quantity
@@ -58,7 +58,7 @@ const reducer = (
       }
       const { sku } = action.payload;
       const filteredCart: CartItemType[] = state.cart.filter(
-        (item) => item.sku != sku //mencari data yang mau dihapus
+        (item) => item.sku !== sku //mencari data yang mau dihapus
       );
       return { ...state, cart: [...filteredCart] }; //membuat state baru dengan card yang
       // sudah di filter
@@ -70,14 +70,14 @@ const reducer = (
       }
       const { sku, qty } = action.payload;
       const itemExists: CartItemType | undefined = state.cart.find(
-        (item) => item.sku == sku //mencari item dengan sku yang sama
+        (item) => item.sku === sku //mencari item dengan sku yang sama
       );
       if (!itemExists) {
         throw new Error("Item must exist in order to update quantity");
       }
       const updatedItem: CartItemType = { ...itemExists, qty }; //update cart dan mengganti qty
       const filteredCart: CartItemType[] = state.cart.filter(
-        (item) => item.sku != sku //filter lagi data yang tidak berubah
+        (item) => item.sku !== sku //filter lagi data yang tidak berubah
       );
       return { ...state, cart: [...filteredCart, updatedItem] }; //gabungkan kembali data
     }
